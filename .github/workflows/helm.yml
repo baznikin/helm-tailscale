@@ -44,8 +44,8 @@ jobs:
       - name: Create Helm Repository
         run: helm repo index cache --url https://spreitzer.ch/helm-tailscale
       - name: Create GitHub Pages Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: cache
       - name: Deploy Helm Repository on GitHub Pages
-        uses: actions/deploy-pages@v1      
+        uses: actions/deploy-pages@v1
